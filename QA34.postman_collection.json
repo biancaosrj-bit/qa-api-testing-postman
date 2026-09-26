@@ -1,0 +1,726 @@
+{
+  "info": {
+    "_postman_id": "3bc70b67-5eec-4012-849a-3273133f99df",
+    "name": "QA34",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57278698",
+    "_collection_link": "https://go.postman.co/collection/57278698-3bc70b67-5eec-4012-849a-3273133f99df?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "PROJETO SPRINT 4",
+      "item": [
+        {
+          "name": "Adicionar itens ao kit",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "/api/v1/kits/:id/products",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "parte 2 /order-and-go/v1/delivery",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Get data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "postman-echo.com/get",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Post data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+              "});",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "postman-echo.com/post",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "post"
+          ]
+        },
+        "description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+      },
+      "response": []
+    },
+    {
+      "name": "Implantar Uber Grocers",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-5e6696d4-c884-4628-814f-69f627f3e2bb.containerhub.tripleten-services.com/api/v1/warehouses",
+          "protocol": "https",
+          "host": [
+            "cnt-5e6696d4-c884-4628-814f-69f627f3e2bb",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "warehouses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obter uma lista de kits no cartão",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-820f8f12-8255-4a37-8c06-ff0a078dc86d.containerhub.tripleten-services.com/api/v1/kits?cardId=1",
+          "protocol": "https",
+          "host": [
+            "cnt-820f8f12-8255-4a37-8c06-ff0a078dc86d",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits"
+          ],
+          "query": [
+            {
+              "key": "cardId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "testes card id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://cnt-3eac30f0-57f0-451c-8dd0-e2f130ca3973.containerhub.tripleten-services.com/api/v1/kits?cardId=1",
+          "protocol": "https",
+          "host": [
+            "cnt-3eac30f0-57f0-451c-8dd0-e2f130ca3973",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits"
+          ],
+          "query": [
+            {
+              "key": "cardId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obter uma lista de kits com produtos que são aprovados pela condição da solicitação",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"ids\": [\r\n        1,\r\n        22\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-380fbecc-09d0-4065-8f80-6d3288c02110.containerhub.tripleten-services.com/api/v1/products/kits",
+          "protocol": "https",
+          "host": [
+            "cnt-380fbecc-09d0-4065-8f80-6d3288c02110",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "kits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/v1/kits",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"Name\":\"QA1\"\r\n\"cardId\":1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-c59d9721-5a6d-434a-aaf3-43a5d54d7187.containerhub.tripleten-services.com/api/v1/kits",
+          "protocol": "https",
+          "host": [
+            "cnt-c59d9721-5a6d-434a-aaf3-43a5d54d7187",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar um kit vazio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cardId\":1,\r\n    \"name\":\"Into space\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-50e2d776-c4d5-4c9e-850a-3637b52c1c39.containerhub.tripleten-services.com/api/v1/kits",
+          "protocol": "https",
+          "host": [
+            "cnt-50e2d776-c4d5-4c9e-850a-3637b52c1c39",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obter uma lista de produtos no kit",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://cnt-6a2c2752-4e97-4399-98a5-17b7f8ea2137.containerhub.tripleten-services.com/api/v1/kits/search?name=Into+space",
+          "protocol": "https",
+          "host": [
+            "cnt-6a2c2752-4e97-4399-98a5-17b7f8ea2137",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "Into+space"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tarefa cURL",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"cardId\": 1}, \"name\": \"Faça uma torta\"} ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://d7ee3833-e90e-40b1-8ba0-a40c2aa75444.containerhub.tripleten-services.com/api/v1/kits",
+          "protocol": "https",
+          "host": [
+            "d7ee3833-e90e-40b1-8ba0-a40c2aa75444",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "KIT COM NOVO NOME",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://cnt-6dcf44da-115f-476a-a2db-07a3566c308f.containerhub.tripleten-services.com/api/v1/kits/:id",
+          "protocol": "https",
+          "host": [
+            "cnt-6dcf44da-115f-476a-a2db-07a3566c308f",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obter todos os logs do servidor",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-a897e645-5402-4618-ad43-5293cc618bed.containerhub.tripleten-services.com/api/logs/main",
+          "protocol": "https",
+          "host": [
+            "cnt-a897e645-5402-4618-ad43-5293cc618bed",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "logs",
+            "main"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obter todos os logs do servidor 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"cardId\": 1\r\n\"name\": \"Into space\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-fa357529-48e0-463b-b183-a39b2dcc1eef.containerhub.tripleten-services.com/api/v1/kits",
+          "protocol": "https",
+          "host": [
+            "cnt-fa357529-48e0-463b-b183-a39b2dcc1eef",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "VERIFICAR OS CUSTOS DO ENVIO",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"products\": [\r\n{\"id\": 1, \"quantity\": 3}\r\n],\r\n\"deliveryTime\": 6\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-39e0ac20-2755-4f0b-86d6-f7b6e80d0cb3.containerhub.tripleten-services.com/api/v1/couriers/check",
+          "protocol": "https",
+          "host": [
+            "cnt-39e0ac20-2755-4f0b-86d6-f7b6e80d0cb3",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "couriers",
+            "check"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Verificar a disponibilidade dos itens nos depósitos",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"products\": [\r\n        {\r\n            \"id\": 5,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-e613d27d-9f2d-476b-9f37-908101b03f19.containerhub.tripleten-services.com/api/v1/warehouses/check",
+          "protocol": "https",
+          "host": [
+            "cnt-e613d27d-9f2d-476b-9f37-908101b03f19",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "warehouses",
+            "check"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "VERIFICAR DISPONIBILIDADE 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"deliveryTime\": 12,\r\n    \"products\": [\r\n        {\r\n            \"id\": 5,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-efca46c0-acb0-44a1-abc3-111832112788.containerhub.tripleten-services.com/everything-you-need/v1/calculate",
+          "protocol": "https",
+          "host": [
+            "cnt-efca46c0-acb0-44a1-abc3-111832112788",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "everything-you-need",
+            "v1",
+            "calculate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "API DOC",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "limitações para criação de kit",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Salada fresca\",\r\n    \"card\": { \"id\": 1,\r\n    \"name\": \"Situacional\"},\r\n    \"productsList\": null,\r\n    \"id\": 7,\r\n    \"productsCount\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-fa357529-48e0-463b-b183-a39b2dcc1eef.containerhub.tripleten-services.com/api/v1/kits",
+          "protocol": "https",
+          "host": [
+            "cnt-fa357529-48e0-463b-b183-a39b2dcc1eef",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deve haver uma URL que remova o kit",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "CRIAR UM USUARIO",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Pamela\",\r\n    \"phone\": \"+19998887766\",\r\n    \"address\": \"Seattle, 100th Ave 750\",\r\n    \"email\": \"pamela@example.com\",\r\n    \"comment\": \"Cuidado com o cão\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-9ffac520-768a-42a5-91ab-600db19f70a4.containerhub.tripleten-services.com/api/v1/users",
+          "protocol": "https",
+          "host": [
+            "cnt-9ffac520-768a-42a5-91ab-600db19f70a4",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SOLICITAÇÃO  2 A 15 CARACTERES",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "SOLICITAÇÃO 2 A 13 CARACTERES",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"firstName\": \"Pamela\",\r\n    \"phone\": \"+1999888776655\",\r\n    \"address\": \"Seattle, 100th Ave 750\",\r\n    \"email\": \"pamela@example.com\",\r\n    \"comment\": \"Beware of the dog\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://cnt-9ffac520-768a-42a5-91ab-600db19f70a4.containerhub.tripleten-services.com/api/v1/users",
+          "protocol": "https",
+          "host": [
+            "cnt-9ffac520-768a-42a5-91ab-600db19f70a4",
+            "containerhub",
+            "tripleten-services",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TESTE AVEIA",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "id inexistentes",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
