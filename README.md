@@ -1,31 +1,65 @@
-# Testes de API – Postman
+# QA API Testing — Postman
+
+Projeto de portfólio de **QA Engineer** focado em testes de API utilizando Postman.
 
 ## 📌 Sobre o projeto
 
-Projeto prático desenvolvido durante minha formação em Quality Assurance (QA) na TripleTen, com foco em testes de API utilizando o Postman.
+Este projeto apresenta a elaboração e execução de testes de API, com foco na validação de requisições HTTP, respostas do servidor, códigos de status e estrutura dos dados retornados em JSON.
 
-## 🧪 Atividades realizadas
+Os testes foram organizados a partir de casos de teste previamente definidos e executados utilizando o Postman.
 
-* Criação e execução de requisições HTTP.
-* Testes de diferentes endpoints da API.
-* Validação de códigos de status HTTP.
-* Verificação dos dados retornados nas respostas.
-* Validação de parâmetros e informações enviadas nas requisições.
-* Comparação entre resultados esperados e resultados obtidos.
-* Identificação e registro de possíveis falhas.
+## 🛠️ Ferramentas utilizadas
 
-## 🛠️ Ferramentas e tecnologias
+* **Postman** — criação e execução dos testes de API
+* **GitHub** — versionamento e documentação do projeto
+* **OpenDocument Spreadsheet (.ods)** — documentação dos casos de teste
+* **JSON** — formato utilizado para exportação da Collection do Postman
 
-* Postman
-* API / REST
-* HTTP
-* JSON
-* Testes funcionais
+## 🧪 Casos de teste
+
+Os casos de teste estão documentados na planilha:
+
+**`qa-test-cases-api-portfolio.ods`**
+
+A planilha contém a estrutura dos cenários utilizados para validar o comportamento das APIs.
+
+## 📦 Postman Collection
+
+A Collection utilizada para execução dos testes está disponível no arquivo:
+
+**`QA34.postman_collection.json`**
+
+Ela pode ser importada diretamente no Postman para reproduzir os testes do projeto.
+
+## 🔍 Tipos de validação
+
+Durante os testes foram consideradas validações como:
+
+* Métodos HTTP
+* Parâmetros das requisições
+* Códigos de status HTTP
+* Estrutura das respostas
+* Dados retornados em JSON
+* Comportamento esperado das APIs
+* Cenários positivos e negativos
+
+## 📁 Estrutura do projeto
+
+```text
+qa-api-testing-postman/
+│
+├── README.md
+├── qa-test-cases-api-portfolio.ods
+└── QA34.postman_collection.json
+```
 
 ## 🎯 Objetivo
 
-Desenvolver experiência prática na execução e análise de testes de API, aplicando conceitos de Quality Assurance aprendidos durante a formação.
+Demonstrar conhecimentos práticos em **testes de API**, documentação de casos de teste, utilização do Postman e organização de artefatos de QA em um repositório GitHub.
 
-## 📚 Formação
+## 👩‍💻 Autora
 
-Projeto desenvolvido como parte da formação de **Analista de QA — TripleTen**.
+**Bianca Di Marco**
+
+QA Engineer em formação.
+
