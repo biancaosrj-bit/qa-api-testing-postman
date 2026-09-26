@@ -307,10 +307,10 @@
           }
         },
         "url": {
-          "raw": "https://cnt-50e2d776-c4d5-4c9e-850a-3637b52c1c39.containerhub.tripleten-services.com/api/v1/kits",
+          "raw": "https://cnt-1f54fc6d-4462-4713-af10-5234996fbfc2.containerhub.tripleten-services.com/api/v1/kits",
           "protocol": "https",
           "host": [
-            "cnt-50e2d776-c4d5-4c9e-850a-3637b52c1c39",
+            "cnt-1f54fc6d-4462-4713-af10-5234996fbfc2",
             "containerhub",
             "tripleten-services",
             "com"
