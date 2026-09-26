@@ -21,9 +21,50 @@
         },
         {
           "name": "/api/v1/kits/:id/products",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
           "request": {
-            "method": "GET",
-            "header": []
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": []\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://cnt-1f54fc6d-4462-4713-af10-5234996fbfc2.containerhub.tripleten-services.com/api/v1/kits/11/products",
+              "protocol": "https",
+              "host": [
+                "cnt-1f54fc6d-4462-4713-af10-5234996fbfc2",
+                "containerhub",
+                "tripleten-services",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "kits",
+                "11",
+                "products"
+              ]
+            }
           },
           "response": []
         },
