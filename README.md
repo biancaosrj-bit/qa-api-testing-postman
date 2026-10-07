@@ -8,6 +8,10 @@ Este projeto apresenta a elaboração e execução de testes de API, com foco na
 
 Os testes foram organizados a partir de casos de teste previamente definidos e executados utilizando o Postman.
 
+## 🎯 Objetivo
+
+Demonstrar conhecimentos práticos em **testes de API**, documentação de casos de teste, utilização do Postman e organização de artefatos de QA em um repositório GitHub.
+
 ## 🛠️ Ferramentas utilizadas
 
 * **Postman** — criação e execução dos testes de API
@@ -43,6 +47,29 @@ Durante os testes foram consideradas validações como:
 * Comportamento esperado das APIs
 * Cenários positivos e negativos
 
+## 📊 Resultado
+
+Os testes foram executados utilizando o Postman e permitiram validar o comportamento das APIs em diferentes cenários.
+
+Foram verificadas as respostas retornadas pelo servidor, os códigos de status HTTP e os dados apresentados em JSON, comparando os resultados obtidos com os resultados esperados definidos nos casos de teste.
+
+Os resultados e os cenários testados foram documentados nos artefatos disponibilizados neste repositório.
+
+## 📚 O que aprendi
+
+Durante o desenvolvimento deste projeto, desenvolvi e pratiquei competências relacionadas a:
+
+* Testes de API
+* Utilização do Postman
+* Criação e execução de requisições HTTP
+* Validação de códigos de status
+* Análise de respostas em JSON
+* Elaboração e execução de casos de teste
+* Criação de cenários positivos e negativos
+* Análise de resultados
+* Documentação de testes
+* Organização de artefatos de QA utilizando GitHub
+
 ## 📁 Estrutura do projeto
 
 ```text
@@ -52,6 +79,7 @@ qa-api-testing-postman/
 ├── qa-test-cases-api-portfolio.ods
 └── QA34.postman_collection.json
 ```
+
 ## ▶️ Como executar os testes
 
 1. Baixe ou clone este repositório.
@@ -62,13 +90,20 @@ qa-api-testing-postman/
 
 Os casos de teste foram documentados previamente na planilha e executados utilizando o Postman.
 
-## 🎯 Objetivo
+## 🔄 Melhorias a serem feitas
 
-Demonstrar conhecimentos práticos em **testes de API**, documentação de casos de teste, utilização do Postman e organização de artefatos de QA em um repositório GitHub.
+Como evolução futura do projeto, podem ser adicionados:
+
+* Testes automatizados utilizando scripts do Postman.
+* Maior cobertura de cenários de teste.
+* Validações adicionais das respostas da API.
+* Integração dos testes com um processo de execução automatizada.
+* Documentação de novos cenários e possíveis casos de erro.
 
 ## 👩‍💻 Autora
 
 **Bianca Di Marco**
 
 QA Engineer em formação.
+
 
